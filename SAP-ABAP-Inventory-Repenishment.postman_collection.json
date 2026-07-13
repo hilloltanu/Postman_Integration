@@ -7,7 +7,7 @@
   },
   "item": [
     {
-      "name": "Material Alerts 2",
+      "name": "Material Alerts",
       "request": {
         "method": "GET",
         "header": [],
