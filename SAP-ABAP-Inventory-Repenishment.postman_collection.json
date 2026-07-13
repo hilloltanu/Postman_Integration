@@ -1,0 +1,84 @@
+{
+  "info": {
+    "_postman_id": "83c846dd-1853-41fd-af30-7a7efda40c38",
+    "name": "SAP-ABAP-Inventory-Repenishment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56446189"
+  },
+  "item": [
+    {
+      "name": "Material Alerts 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://zvcsrndap01.americas.swk.pri:8010/zrepl/materials/alerts",
+          "protocol": "http",
+          "host": [
+            "zvcsrndap01",
+            "americas",
+            "swk",
+            "pri"
+          ],
+          "port": "8010",
+          "path": [
+            "zrepl",
+            "materials",
+            "alerts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Material Replenishment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"matnr\" : \"MAT-001\",\r\n    \"werks\" : \"1000\",\r\n    \"lgort\" : \"0001\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://zvcsrndap01.americas.swk.pri:8010/zrepl/materials/replenish",
+          "protocol": "http",
+          "host": [
+            "zvcsrndap01",
+            "americas",
+            "swk",
+            "pri"
+          ],
+          "port": "8010",
+          "path": [
+            "zrepl",
+            "materials",
+            "replenish"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Material Threshold",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"matnr\" : \"MAT-001\",\r\n    \"werks\" : \"1000\",\r\n    \"min_stock\" : 15000,\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    }
+  ]
+}
